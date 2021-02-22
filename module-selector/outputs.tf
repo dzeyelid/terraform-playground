@@ -3,5 +3,5 @@ output "one_module_name" {
 }
 
 output "two_module_name" {
-  value = module.two["selected"].module_name
+  value = try(module.two["selected"].module_name, "Not found")
 }
